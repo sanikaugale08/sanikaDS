@@ -1,0 +1,35 @@
+n=int(input("Enter the total no of members:"))
+borrow=[]
+for i in range(n):
+    num=int(input(f"Enter the no of books borrow{i+1}:"))
+    borrow.append(num)
+sum=0
+for num in borrow:
+    sum=sum+num
+avg=sum/n
+print("the average is:",avg)
+highest=borrow[0]
+lowest=borrow[0]
+for num in borrow:
+    if num>highest:
+        highest=num
+    if num<lowest:
+        lowest=num
+print("Highest borrow count:",highest)
+print("Lowest borrow count:",lowest)
+zero_count=0
+for num in borrow:
+    if num==0:
+        zero_count+=1
+print("Members who borrowed no books:",zero_count)
+mode=borrow[0]
+max_count=0
+for num in borrow:
+    count=0
+    for value in borrow:
+        if num==value:
+            count+=1
+    if count>max_count:
+        max_count=count
+        mod=num
+print("Most frequently borrow count(mode):",mode)
