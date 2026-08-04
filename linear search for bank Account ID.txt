@@ -1,0 +1,17 @@
+n = int(input("Enter number of IDs: "))
+numbers = []
+
+print("Enter the IDs:")
+for i in range(n):
+    numbers.append(input()) 
+
+# Removed int() to allow mixed text/numbers
+
+find = input("Enter ID to search: ")
+
+for i in range(len(numbers)):
+    if numbers[i] == find:
+        print("ID found at position", i)
+        break
+else:
+    print("ID not found")
