@@ -33,3 +33,16 @@ for num in borrow:
         max_count=count
         mod=num
 print("Most frequently borrow count(mode):",mode)
+
+Output: Enter the total no of members:6
+        Enter the no of books borrow1:5
+        Enter the no of books borrow2:3
+        Enter the no of books borrow3:2
+        Enter the no of books borrow4:0
+        Enter the no of books borrow5:1
+        Enter the no of books borrow6:2
+        the average is: 2.1666666666666665
+        Highest borrow count: 5
+        Lowest borrow count: 0
+        Members who borrowed no books: 1
+        Most frequently borrow count(mode): 5
