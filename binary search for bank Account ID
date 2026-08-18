@@ -1,0 +1,43 @@
+n = int(input("Enter number of IDs: "))
+numbers = []
+
+print("Enter the IDs:")
+for i in range(n):
+    numbers.append(input())
+
+numbers.sort()
+print("\nSorted list:", numbers)
+
+find = input("Enter ID to search: ")
+
+low = 0
+high = len(numbers) - 1
+found = False
+
+while low <= high:
+    mid = (low + high) // 2
+    
+    if numbers[mid] == find:
+        print(f"ID found at position {mid}")
+        found = True
+        break
+    elif numbers[mid] > find:
+        high = mid - 1
+    else:
+        low = mid + 1
+
+if not found:
+    print("ID not found")
+
+Output: Enter number of IDs: 6
+        Enter the IDs:
+        101
+        109
+        107
+        110
+        104
+        103
+
+       Sorted list: ['101', '103', '104', '107', '109', '110']
+       Enter ID to search: 109
+       ID found at position 4
